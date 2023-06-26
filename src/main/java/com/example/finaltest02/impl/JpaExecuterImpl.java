@@ -196,7 +196,7 @@ public class JpaExecuterImpl<T> implements JpaExecutors<T> {
             e.printStackTrace();
         }
     }
-    public void updateId(String id, String fullname, String birthDate, String position, String address, String department){
+    public void updateId(String id, String fullname, String address, String position, String birthDate, String department){
         Connection conn = null;
         try {
             conn = DBConnection.getInstance().getConnection();
@@ -213,7 +213,7 @@ public class JpaExecuterImpl<T> implements JpaExecutors<T> {
 
         PreparedStatement preparedStatement = null;
         try {
-            preparedStatement = conn.prepareStatement("UPDATE TABLE employee SET fullName = " + "'" + fullname + "'" + "," + "address = " + "'" + address + "'" + "," + "birthDay = " + "'" + birthDate + "'" + "," + "position = " + "'" + position + "," + "department = " + "'" + department + "'" + "'" + " WHERE id = " + id);
+            preparedStatement = conn.prepareStatement("UPDATE employee SET fullName = " + "'" + fullname + "'" + "," + "address = " + "'" + address + "'" + "," + "birthDay = " + "'" + birthDate + "'" + "," + "position = " + "'" + position + "," + "department = " + "'" + department + "'" + "'" + " WHERE id = " + id);
             System.err.println(preparedStatement);
         } catch (SQLException e) {
             e.printStackTrace();
