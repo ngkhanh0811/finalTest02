@@ -11,7 +11,7 @@
     <title>Update</title>
 </head>
 <body>
-<form method="post" action="${pageContext.request.contextPath}/update">
+<form method="post" action="${pageContext.request.contextPath}/update?id=${item.id}">
     <label>Full name:</label><br>
     <input class="border-solid" type="text" name="fullName" placeholder="Enter full name" required/><br>
     <label>Birth date:</label><br>
