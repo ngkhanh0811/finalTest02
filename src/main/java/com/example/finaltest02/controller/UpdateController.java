@@ -29,6 +29,7 @@ public class UpdateController extends HttpServlet {
         view.forward(req, res);
     }
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+        String id = req.getParameter("id");
         String fullname = req.getParameter("fullName");
         String address = req.getParameter("address");
         String position = req.getParameter("position");
@@ -36,12 +37,7 @@ public class UpdateController extends HttpServlet {
         String department = req.getParameter("department");
 
         EmployeeImpl employee = new EmployeeImpl();
-        try {
-            employee.update(id, fullname, address, position, birthDate, department);
-            System.out.println();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        employee.updateId(id, fullname, address, position, birthDate, department);
         res.sendRedirect(req.getContextPath() + "/employee");
     }
 }
