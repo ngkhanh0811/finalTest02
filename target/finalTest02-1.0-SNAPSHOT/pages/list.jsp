@@ -48,9 +48,9 @@
                             <ul class="flex gap-[20px] items-center">
                                 <li><button><a href="/finalTest02_war_exploded/employee?id=${item.id}">Details</a></button></li>
                                 <li><button><a href="/finalTest02_war_exploded/update?id=${item.id}">Edit</a></button></li>
-                                <li><form method="post" action="/delete">
-                                    <button type="submit"><a href="/finalTest02_war_exploded/employee?id=${item.id}">Delete</a></button>
-                                </form></li>
+                                <li>
+                                    <button type="submit"><a href="/finalTest02_war_exploded/delete?id=${item.id}">Delete</a></button>
+                                </li>
                             </ul>
                         </td>
                     </tr>

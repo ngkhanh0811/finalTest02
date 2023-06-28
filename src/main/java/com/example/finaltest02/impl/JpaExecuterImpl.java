@@ -213,7 +213,7 @@ public class JpaExecuterImpl<T> implements JpaExecutors<T> {
 
         PreparedStatement preparedStatement = null;
         try {
-            preparedStatement = conn.prepareStatement("UPDATE employee SET fullName = " + "'" + fullname + "'" + "," + "address = " + "'" + address + "'" + "," + "birthDay = " + "'" + birthDate + "'" + "," + "position = " + "'" + position + "," + "department = " + "'" + department + "'" + "'" + " WHERE id = " + id);
+            preparedStatement = conn.prepareStatement("UPDATE employee SET fullName = " + "'" + fullname + "'" + "," + "address = " + "'" + address + "'" + "," + "birthDay = " + "'" + birthDate + "'" + "," + "position = " + "'" + position + "'" + "," + "department = " + "'" + department + "'" + " WHERE id = " + id);
             System.err.println(preparedStatement);
         } catch (SQLException e) {
             e.printStackTrace();
